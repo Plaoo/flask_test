@@ -19,4 +19,4 @@ def index():
             </body>
         </html>
 """
-    return html.format(benvenuto = benvenuto)
+    return html.format(benvenuto=benvenuto)
