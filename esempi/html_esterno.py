@@ -2,7 +2,7 @@ from flask import Flask
 from flask import render_template
 import os
 
-app = Flask(__name__, template_folder='../templates')
+app = Flask(__name__)
 #meglio dichiarare dove si trova la dir con i templates
 
 @app.route("/")

@@ -1,0 +1,19 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+
+<html>
+    <head>
+        <title>animale - {{ animale.nome }}</title>
+    </head>
+    <body>
+        <h1>{{ animale.nome }}</h1>
+        <ul>
+          <li><strong>Nato:</strong> {{ animale.nato }}</li>
+          <li><strong>Nazionalità:</strong> {{ animale.nazionalita }}</li>
+          <li><strong>Padrone:</strong> {{ animale.padrone }}</li>
+        </ul>
+
+
+        <p><a href="{{ url_for('animali') }}">Ritorna agli animali</a></p>
+    </body>
+</html>
