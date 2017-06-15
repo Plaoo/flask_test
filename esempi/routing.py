@@ -4,14 +4,14 @@ app = Flask(__name__)
 
 ANIMALE_INFO = {
     'cane': {
-        'nome': 'fido',
+        'nome': 'Fido',
         'razza': 'pitbull',
         'nazionalita': 'tedesca',
         'padrone': 'Giacomo Pisu',
         'nato': '12/12/2016',
     },
     'gatto': {
-        'nome': 'pussy',
+        'nome': 'Pussy',
         'razza': 'persiano',
         'nazionalita': 'italiana',
         'padrone': 'Gisella Gaba',
