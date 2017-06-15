@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, abort
 
 app = Flask(__name__)
 
@@ -26,20 +26,20 @@ ANIMALE_INFO = {
 def animali():
     return render_template('routing/animali.html')
 
-#ERRORI
-
-@app.route('/animale/<string:animale_nome')
-def animale(animale_nome):
-    if animale_nome not in ANIMALE_INFO:
+# ERRORI
+@app.route('/animale/<string:animali_informazioni>')
+def animale(animali_informazioni):
+    if animali_informazioni not in ANIMALE_INFO:
         abort(404)
     return render_template('routing/animale.html',
-                           animale=ANIMALE_INFO[animale_nome])
+                           animale=ANIMALE_INFO[animali_informazioni])
 
 
+@app.route('/animale/<string:animali_informazioni>/edit')
+def animale_admin(animali_informazioni):
+    abort(401)
 
 
-@app.route('/animale/<animale_nome>')
-def animale(animale_nome):
-    return render_template('routing/animale.html',
-                           animale=ANIMALE_INFO[animale_nome])
-    # animale crea una lista che comprende tutti i dati contenuti in ANIMALE_INFO
+@app.errorhandler(404)
+def not_found(error):
+    return render_template('routing/error.html'), 404

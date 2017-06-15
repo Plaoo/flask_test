@@ -28,8 +28,8 @@ def animali():
 
 
 
-@app.route('/animale/<animale_nome>')
-def animale(animale_informazioni):
+@app.route('/animale/<animali_informazioni>')
+def animale(animali_informazioni):
     return render_template('routing/animale.html',
-                           animale=ANIMALE_INFO[animale_informazioni])
-    # animale crea una lista che comprende tutti i dati contenuti in ANIMALE_INFO
+                           animale=ANIMALE_INFO[animali_informazioni])
+    # animali_informazioni crea una lista che comprende tutti i dati contenuti in ANIMALE_INFO
