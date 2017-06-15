@@ -26,10 +26,20 @@ ANIMALE_INFO = {
 def animali():
     return render_template('routing/animali.html')
 
+#ERRORI
+
+@app.route('/animale/<string:animale_nome')
+def animale(animale_nome):
+    if animale_nome not in ANIMALE_INFO:
+        abort(404)
+    return render_template('routing/animale.html',
+                           animale=ANIMALE_INFO[animale_nome])
+
+
 
 
 @app.route('/animale/<animale_nome>')
-def animale(animale_informazioni):
+def animale(animale_nome):
     return render_template('routing/animale.html',
-                           animale=ANIMALE_INFO[animale_informazioni])
+                           animale=ANIMALE_INFO[animale_nome])
     # animale crea una lista che comprende tutti i dati contenuti in ANIMALE_INFO

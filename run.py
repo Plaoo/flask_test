@@ -7,7 +7,8 @@ import os
 # from esempi.html_inline import app
 # from esempi.html_inline_second import app
 #from esempi.html_esterno import app
-from esempi.routing import app
+#from esempi.routing import app
+from esempi.custom_errors import app
 
 if __name__ == "__main__":
     app.debug = True
