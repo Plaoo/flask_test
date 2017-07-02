@@ -1,0 +1,22 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <title>Informazioni client</title>
+</head>
+<body>
+    <h1>Informazioni client</h1>
+    <ul>
+        <li><strong>Indirizzo IP:</strong> {{ request.remote_Addr}} </li>
+        <li><strong>Zona:</strong> {{ client_location.city}}</li>
+        <li><strong>Path</strong> {{ request.path}} </li>
+        <li><strong>Metodo HTTP:</strong> {{ request.method}} </li>
+    </ul>
+    <div>
+        <h2>Headers</h2>
+        { % for header, value in request.header % }
+        <p><strong>{{header}}:</strong> {{value}}</p>
+        { % endfor % }
+    </div>
+</body>
+</html>
