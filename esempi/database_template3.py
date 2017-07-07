@@ -20,4 +20,3 @@ def hello_world():
     cursor = db_connect.execute('SELECT id, name FROM author;')
     authors = [dict(id=row[0], name=row[1]) for row in cursor.fetchall()]
     return render_template('database/authors.html', authors=authors)
-

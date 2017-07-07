@@ -11,6 +11,7 @@ def connect_db():
 
 @app.before_request
 def before_request():
+    print("Ciao")
     g.db = connect_db()
 
 
@@ -21,3 +22,6 @@ def hello_world():
     authors = [dict(id=row[0], name=row[1]) for row in cursor.fetchall()]
     return render_template('database/authors.html', authors=authors)
 
+@app.route('extra')
+def extra():
+    return "Altra vista"

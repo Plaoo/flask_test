@@ -12,9 +12,11 @@ import os
 # from esempi.request_info import app
 # from esempi.redirects import app
 # from esempi.database import app
-# from esempi.database_template import app
-#from esempi.database_template_condition import app
-from esempi.database_join import app
+#from esempi.database_template import app
+# from esempi.database_template_condition import app
+# from esempi.database_join import app
+#from esempi.database_template2 import app
+from esempi.database_template3 import app
 
 if __name__ == "__main__":
     app.debug = True
