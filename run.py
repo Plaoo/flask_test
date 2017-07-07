@@ -9,9 +9,12 @@ import os
 # from esempi.html_esterno import app
 # from esempi.routing import app
 # from esempi.custom_errors import app
-#from esempi.request_info import app
-#from esempi.redirects import app
-from esempi.database import app
+# from esempi.request_info import app
+# from esempi.redirects import app
+# from esempi.database import app
+# from esempi.database_template import app
+#from esempi.database_template_condition import app
+from esempi.database_join import app
 
 if __name__ == "__main__":
     app.debug = True
