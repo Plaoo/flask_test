@@ -21,7 +21,6 @@ ANIMALE_INFO = {
 
 }
 
-
 @app.route('/')
 def animali():
     return render_template('routing/animali.html')
